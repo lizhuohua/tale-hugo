@@ -6,6 +6,10 @@
 		{{- else if .Description }}
 			<meta name="description" content="{{ .Description }}">
 		{{- end }}
+
+        {{ if not .Site.IsServer }}
+        {{ template "_internal/google_analytics_async.html" . }}
+        {{ end }}
 	
 		<title>
 			{{- if eq .URL "/" }}
