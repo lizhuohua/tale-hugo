@@ -1,20 +1,11 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 <main>
+	{{ partial "index/introduction.html" . }}
+
 	<div class="catalogue">
 		{{ range (.Paginate .Pages).Pages }}
-			<a href="{{ .Permalink }}" class="catalogue-item">
-				<div>
-					<time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "January 2, 2006" }}</time>
-					<h1 class="catalogue-title">{{ .Title }}</h1>
-					<div class="catalogue-line"></div>
-	
-					<p>
-						{{ .Summary }}
-					</p>
-	
-				</div>
-			</a>
+			{{ .Render "summary" }}
 		{{ end }}
 	</div>
 	
@@ -30,4 +21,4 @@
 	</div>
 </main>
 
-{{ partial "footer.html" . }}
+{{ end }}
