@@ -52,6 +52,42 @@ If you have cloned the theme, you can run `git pull` inside the theme folder.
 
 ## Configuration
 
+### Menu
+
+The top menu uses [Hugo Menus](https://gohugo.io/content-management/menus/), with the name of the menu being `main`. To turn on the menu, follow the steps there - you can either add something like this to the front-matter of your pages:
+
+```
+---
+menu: "main"
+---
+```
+
+... or you can add a menu section to your `config` file:
+
+```
+sectionPagesMenu = "main"
+```
+
+Or if you want more control, add a specific entry for each item in your menu:
+
+```
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 0
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/posts/"
+    weight = 0
+```
+
+For menu internationalization/translation, see [Multilingual Mode: Menus](https://gohugo.io/content-management/multilingual/#menus).
+
 ### Internationalisation (i18n)
 
 Tale supports using other languages than English. Language files for the texts Tale uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
@@ -96,9 +132,25 @@ The copyright message in the footer uses the name of the author of the site, as 
     name = "Emiel"
 ```
 
+### Additional CSS files
+
+The theme can load additional CSS files for you, e.g. to override some of the styles, or the CSS that goes with a component that you're using. To add additional CSS files, put these files in the `static` folder of your site and add the `css` parameter to `config.toml`, like so:
+
+```
+[Params]
+css = ["custom.css"]
+```
+
+To load multiple CSS files, use the parameter like this:
+
+```
+[Params]
+css = ["custom.css", "custom2.css"]
+```
+
 ## Acknowledgments
 
-Thanks 
+Thanks
 
 - to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
