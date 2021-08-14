@@ -1,24 +1,14 @@
 {{ define "main" }}
 
 <main>
-	{{ partial "index/introduction.html" . }}
+	  <div class="post">
 
-	<div class="catalogue">
-		{{ range (.Paginate .Site.RegularPages).Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-	</div>
+		    <h1 class="post-title">{{ .Title }}</h1>
+		    <div class="post-line"></div>
 
-	<div class="pagination">
-		{{ if .Paginator.HasPrev }}
-			<a href="{{ .Paginator.Prev.URL }}" class="left arrow">&#8592;</a>
-		{{ end }}
-		{{ if .Paginator.HasNext }}
-			<a href="{{ .Paginator.Next.URL }}" class="right arrow">&#8594;</a>
-		{{ end }}
+		    {{ .Content }}
 
-		<span>{{ .Paginator.PageNumber }}</span>
-	</div>
+	  </div>
 </main>
 
 {{ end }}
