@@ -23,7 +23,18 @@ pre code {
   padding: 0;
 }
 
+:not(pre)>code {
+  padding:2px 5px;
+  margin:auto 1px;
+  border:1px solid #ccc;
+  border-radius:3px;
+  background-clip:padding-box;
+  font-size:80%
+}
+
 .highlight {
+  border:1px solid #ccc;
+  box-shadow:3px 3px 3px #eee;
   background-color: $grey-3;
   border-radius: 3px;
   line-height: 1.4;
