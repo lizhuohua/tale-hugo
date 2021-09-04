@@ -62,19 +62,31 @@ img {
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  // width: 100%;
+    margin:1em auto;
+    border-top:2px solid;
+    border-collapse:collapse;
 }
 
+table,
+thead {
+    border-bottom:2px solid;
+}
+
+table td+td,
+table th+th {
+    border-left:1px solid grey
+}
+
+table tr {
+    border-top:1px solid #d3d3d3
+}
+
+td,
 th {
-  border-top: 1px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  padding: 0.3rem;
+    padding:.3em .6em;
+    vertical-align:middle
 }
 
-td {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 0.3rem;
+.table-caption {
+    text-align: center;
 }

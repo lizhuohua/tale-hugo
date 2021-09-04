@@ -55,4 +55,10 @@ pre code {
        -moz-user-select: none;
             user-select: none;
   }
+
+  // If this is not set, there will be a thin line on top of a code block
+  // if the code block has line numbers enabled.
+  table {
+    border-collapse: separate;
+  }
 }
