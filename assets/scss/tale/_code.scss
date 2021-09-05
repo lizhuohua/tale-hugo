@@ -62,3 +62,129 @@ pre code {
     border-collapse: separate;
   }
 }
+
+// Add language name tags for code blocks
+// Copied and modified from https://gitlab.com/kaushalmodi/hugo-theme-refined/-/blob/master/assets/css/refined.css
+div.highlight {
+    position: relative;
+}
+
+[data-lang]::before {
+    padding: 0.25em 0.5em;       /* top/bottom left/right */
+    position: absolute;
+    /* content: attr(data-lang); */
+    /* Above is a short hand for the below explicit content specification,
+       though you lose the control on letter casing. */
+    display:block;
+    background-color:#b3b3b3;
+    top:0;
+    right:0;
+    border-bottom-left-radius:8px;
+    border:0;
+    color:#fff;
+    font-size:80%
+}
+
+pre code.language-C::before                { content: 'C'; }
+pre code.language-D::before                { content: 'D'; }
+pre code.language-J::before                { content: 'J'; }
+pre code.language-R::before                { content: 'R'; }
+pre code.language-c::before                { content: 'C'; }
+pre code.language-d::before                { content: 'D'; }
+pre code.language-j::before                { content: 'J'; }
+pre code.language-r::before                { content: 'R'; }
+pre code.language-abc::before              { content: 'ABC'; }
+pre code.language-ada::before              { content: 'Ada'; }
+pre code.language-ash::before              { content: 'ash'; }
+pre code.language-asm::before              { content: 'Assembler'; }
+pre code.language-asymptote::before        { content: 'Asymptote'; }
+pre code.language-awk::before              { content: 'Awk'; }
+pre code.language-bash::before             { content: 'Bash'; }
+pre code.language-calc::before             { content: 'Emacs Calc'; }
+pre code.language-caml::before             { content: 'Caml'; }
+pre code.language-clojure::before          { content: 'Clojure'; }
+pre code.language-conf::before             { content: 'Conf'; }
+pre code.language-coq::before              { content: 'Coq'; }
+pre code.language-cpp::before              { content: 'C++'; }
+pre code.language-csh::before              { content: 'csh'; }
+pre code.language-css::before              { content: 'CSS'; }
+pre code.language-dash::before             { content: 'dash'; }
+pre code.language-delphi::before           { content: 'Delphi'; }
+pre code.language-ditaa::before            { content: 'ditaa'; }
+pre code.language-dot::before              { content: 'Graphviz'; }
+pre code.language-ebnf2ps::before          { content: 'ebfn2ps'; }
+pre code.language-emacs-lisp::before       { content: 'Emacs Lisp'; }
+pre code.language-elisp::before            { content: 'Emacs Lisp'; }
+pre code.language-forth::before            { content: 'Forth'; }
+pre code.language-fortran::before          { content: 'Fortran'; }
+pre code.language-gnuplot::before          { content: 'gnuplot'; }
+pre code.language-go::before               { content: 'Go'; }
+pre code.language-go-html-template::before { content: 'Go Template'; }
+pre code.language-go-text-template::before { content: 'Go Template'; }
+pre code.language-groovy::before           { content: 'Groovy'; }
+pre code.language-haskell::before          { content: 'Haskell'; }
+pre code.language-hledger::before          { content: 'hledger'; }
+pre code.language-html::before             { content: 'HTML'; }
+pre code.language-idl::before              { content: 'IDL'; }
+pre code.language-io::before               { content: 'IO'; }
+pre code.language-java::before             { content: 'Java'; }
+pre code.language-js::before               { content: 'Javascript'; }
+pre code.language-javascript::before       { content: 'Javascript'; }
+pre code.language-json::before             { content: 'JSON'; }
+pre code.language-ksh::before              { content: 'ksh'; }
+pre code.language-latex::before            { content: 'LaTeX'; }
+pre code.language-ledger::before           { content: 'Ledger'; }
+pre code.language-lilypond::before         { content: 'Lilypond'; }
+pre code.language-lisp::before             { content: 'Lisp'; }
+pre code.language-lua::before              { content: 'Lua'; }
+pre code.language-makefile::before         { content: 'Makefile'; }
+pre code.language-matlab::before           { content: 'MATLAB'; }
+pre code.language-maxima::before           { content: 'Maxima'; }
+pre code.language-mercury::before          { content: 'Mercury'; }
+pre code.language-metapost::before         { content: 'MetaPost'; }
+pre code.language-mksh::before             { content: 'mksh'; }
+pre code.language-modula-2::before         { content: 'Modula-2'; }
+pre code.language-mscgen::before           { content: 'Mscgen'; }
+pre code.language-nxml::before             { content: 'XML'; }
+pre code.language-nim::before              { content: 'Nim'; }
+pre code.language-ocaml::before            { content: 'Objective Caml'; }
+pre code.language-octave::before           { content: 'Octave'; }
+pre code.language-org::before              { content: 'Org'; }
+pre code.language-oz::before               { content: 'OZ'; }
+pre code.language-pascal::before           { content: 'Pascal'; }
+pre code.language-perl::before             { content: 'Perl'; }
+pre code.language-picolisp::before         { content: 'Pico Lisp'; }
+pre code.language-plain-tex::before        { content: 'Plain TeX'; }
+pre code.language-plantuml::before         { content: 'PlantUML'; }
+pre code.language-posh::before             { content: 'posh'; }
+pre code.language-processing::before       { content: 'Processing.js'; }
+pre code.language-prolog::before           { content: 'Prolog'; }
+pre code.language-ps::before               { content: 'PostScript'; }
+pre code.language-python::before           { content: 'Python'; }
+pre code.language-ruby::before             { content: 'Ruby'; }
+pre code.language-sass::before             { content: 'Sass'; }
+pre code.language-scala::before            { content: 'Scala'; }
+pre code.language-scheme::before           { content: 'Scheme'; }
+pre code.language-screen::before           { content: 'Gnu Screen'; }
+pre code.language-sed::before              { content: 'Sed'; }
+pre code.language-sh::before               { content: 'Bash'; }
+pre code.language-shell::before            { content: 'Shell'; }
+pre code.language-simula::before           { content: 'Simula'; }
+pre code.language-sql::before              { content: 'SQL'; }
+pre code.language-sqlite::before           { content: 'SQLite'; }
+pre code.language-systemverilog::before    { content: 'SystemVerilog'; }
+pre code.language-tcl::before              { content: 'tcl'; }
+pre code.language-tcsh::before             { content: 'tcsh'; }
+pre code.language-tex::before              { content: 'TeX'; }
+pre code.language-toml::before             { content: 'TOML'; }
+pre code.language-verilog::before          { content: 'Verilog'; }
+pre code.language-vhdl::before             { content: 'VHDL'; }
+pre code.language-xml::before              { content: 'XML'; }
+pre code.language-yaml::before             { content: 'YAML'; }
+pre code.language-dot:before               { content: 'Dot'; }
+pre code.language-gnuplot:before           { content: 'Gnuplot'; }
+pre code.language-makefile:before          { content: 'Makefile'; }
+pre code.language-matlab:before            { content: 'Matlab'; }
+pre code.language-mongo:before             { content: 'MongoDB'; }
+pre code.language-typescript:before        { content: 'Typescript'; }
+pre code.language-rust:before              { content: 'Rust'; }
