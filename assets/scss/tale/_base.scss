@@ -90,3 +90,21 @@ th {
 .table-caption {
     text-align: center;
 }
+
+.headline-hash {
+    color: $default-color;
+    vertical-align: top;
+    font-size: 0.8em;
+    visibility: hidden
+}
+
+.headline-hash:hover {
+    opacity: 0.75;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a { visibility: visible}
