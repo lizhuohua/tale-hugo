@@ -3,8 +3,10 @@
 {{ $re := $.File.BaseFileName }}
 {{ $backlinks := slice }}
 {{ range .Site.AllPages }}
+   {{ if .File }}
    {{ if and (findRE $re .RawContent) (not (eq $re .File.BaseFileName)) }}
       {{ $backlinks = $backlinks | append . }}
+   {{ end }}
    {{ end }}
 {{ end }}
 
