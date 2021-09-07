@@ -35,7 +35,7 @@ pre code {
 
 .highlight {
   border:1px solid #ccc;
-  box-shadow:3px 3px 3px #eee;
+  box-shadow: 2px 2px 2px -2px $shadow-color;
   background-color: $grey-3;
   border-radius: 3px;
   line-height: 1.4;
