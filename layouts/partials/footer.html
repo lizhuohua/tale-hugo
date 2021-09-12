@@ -7,4 +7,6 @@
 			<span>
 			&copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Author.name }}
 			</span>
+
+      {{ partial "revolvermaps" . }}
 		</footer>
