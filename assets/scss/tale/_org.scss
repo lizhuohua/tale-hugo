@@ -2,3 +2,19 @@
     font-size: 1.8em;
     font-weight: bold;
 }
+
+.org-todo {
+    color:#fff;
+    padding:.1em .3em;
+    border-radius:3px;
+    background-clip:padding-box;
+    font-size:80%;
+    font-family:Lucida Console,monospace;
+    line-height:1
+}
+.todo {
+    background-color:red
+}
+.done {
+    background-color:green
+}
