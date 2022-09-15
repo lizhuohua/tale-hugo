@@ -4,8 +4,8 @@
 
 html,
 body {
-  color: $default-color;
-  background-color: #fff;
+  color: var(--default-color);
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -32,18 +32,19 @@ h3,
 h4,
 h5,
 h6 {
-  color: $default-shade;
+  color: var(--default-shade);
   font-family: $sans-serif;
   line-height: normal;
 }
 
 a {
-  color: $blue;
+  color: var(--blue);
   text-decoration: none;
 }
 
 blockquote {
-  border-left: .25rem solid;
+  border-left: .25rem solid var(--grey-2);
+  color: var(--grey-1);
   margin: .8rem 0;
   padding: .5rem 1rem;
 
@@ -93,7 +94,7 @@ th {
 }
 
 .headline-hash {
-    color: $default-color;
+    color: var(--default-color);
     vertical-align: top;
     font-size: 0.8em;
     visibility: hidden
