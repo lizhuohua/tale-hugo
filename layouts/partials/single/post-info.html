@@ -3,7 +3,7 @@
     {{- if .Params.Author }}
         {{ .Params.Author }}
     {{- else }}
-        {{ .Site.Params.Author }}
+        {{ .Site.Params.Author.name }}
     {{- end }}
 
     {{- if .PublishDate }}
