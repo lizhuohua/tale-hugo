@@ -33,6 +33,7 @@ footer,
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
+    font-size: 1.5rem;
 
     &:hover,
     &:focus {
@@ -51,7 +52,7 @@ footer,
     @include transition(all .2s ease-out);
     color: $default-color;
     display: inline-block;
-    opacity: .6;
+    opacity: .8;
     padding: 0 2rem 0 0;
 
     &:last-child {
@@ -93,4 +94,21 @@ footer {
     color: $default-color;
     font-size: .8rem;
   }
+}
+
+.social-icon-links {
+  a {
+    color: $default-color;
+  }
+
+  .icon svg {
+    height: 2em;
+    width: 2em;
+  }
+}
+
+.icon svg {
+  height: 1em;
+  width: 1em;
+  color: inherit;
 }

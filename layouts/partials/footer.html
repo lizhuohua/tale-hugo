@@ -4,6 +4,9 @@
               {{ template "_internal/disqus.html" . }}
             </figure>
 			{{ end }}
+            <div class="site-social-links">
+              {{ partial "social-links.html" . }}
+            </div>
 			<span>
 			&copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Params.Author.name }}
 			</span>
